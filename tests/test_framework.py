@@ -5,6 +5,7 @@ from io import StringIO
 from types import LambdaType
 
 from pylint import epylint as lint
+from typing import List
 
 
 class TestItem:
@@ -348,7 +349,7 @@ def create_lint_test():
 
 
 def create_blacklist_test():
-    def create_blacklist_code_analyzer(x) -> list[Test]:
+    def create_blacklist_code_analyzer(x) -> List[Test]:
         blacklist, test_file = x
         tests = []
         with open(test_file, 'r') as file:
@@ -397,7 +398,7 @@ class ListStream:
         pass
 
 
-def get_IO(func, input: list[str] = None):
+def get_IO(func, input: List[str] = None):
     """
     captures the output of func
     returns a tuple of:
