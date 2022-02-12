@@ -1,0 +1,13 @@
+a= "hello, world!"
+b= ["Paul", "George", "john", "Ringo"]
+
+d = b[1]
+print(b)
+
+
+# slicing a list
+c=a[::-1]
+ #a[12::-1] prints everythin back words or a[::-1]
+ #a[12:6:-1]  prints backwords
+#print(c)
+
