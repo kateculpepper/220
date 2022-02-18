@@ -26,8 +26,7 @@ world2 = "in the world it's a small world"
 c2 = world2.split()
 c3 = world2.split('t')
 
-
-# print(c2)
+# print(c2)ssd
 # print(c3)
 
 
