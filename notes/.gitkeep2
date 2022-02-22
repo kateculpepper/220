@@ -1,0 +1,42 @@
+# 2/21 CHAPTER 6 FUNCTIONS
+import math
+from math import *
+from graphics import *
+
+
+def happy(holiday):
+    print("Happy {} to you".format(holiday))
+
+
+def sing(name, holiday):
+    happy(holiday)
+    happy(holiday)
+    print("Happy {} dear {}".format(holiday, name))
+    happy(holiday)
+
+
+# sing('kate', 'halloween')
+# sing('george', 'birthday')
+
+def square(num):
+    x = num * num
+    return x
+
+
+three_squared = square(3)
+
+
+# print(three_squared)
+
+def distance(p1, p2):  # writing a function to determine distance and return it
+    x1 = p1.getX()
+    y1 = p1.getY()
+    x2 = p2.getX()
+    y2 = p2.getY()
+    return math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
+
+
+point_a = Point(2, 3)
+point_b = Point(100, 220)
+d = distance(point_a, point_b)
+print(d)

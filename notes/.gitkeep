@@ -97,3 +97,10 @@ def cents():
     dollars = 12
     cents1 = 7
     amount = "i have {}.{0>2}".format(dollars, cents1)
+
+def ords_():
+    value = ord("h")
+    print(value)
+ords_()
+
+
