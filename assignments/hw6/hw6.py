@@ -1,42 +1,69 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: <Kate Culpepper>
+<hw6>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <This program runs a series of programs. This program includes a function that converts cash
+encodes a message input by the user using a key also input by the user, finds the area and volume of a sphere
+finds the sum and cube of the first n natural numbers, and then another function that encodes using a different set
+of key and sentence by the user.>
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+
 """
+import math
 
 
 def cash_converter():
-    pass
+    int_input = eval(input("Enter and integer: "))
+    dollar_out = "That is ${}".format(int_input)
+    print(dollar_out)
 
 
 def encode():
-    pass
+    input_msg = input("Enter a message: ")
+    input_key = eval(input("enter a key: "))
+    output = " "
+    for i in range(len(input_msg)):
+        msg_value = ord(input_msg[i])
+        key_value = input_key
+        result_code = (msg_value + key_value)
+        output = output + chr(result_code)
+    print(output)
 
 
 def sphere_area(radius):
-    pass
+    res = ((4 * math.pi) * (radius ** 2))
+    return float(res)
 
 
 def sphere_volume(radius):
-    pass
+    res = (((4 / 3) * math.pi) * (radius ** 3))
+    return float(res)
 
 
 def sum_n(number):
-    pass
+    res = (number * (number + 1)) / 2
+    return int(res)
 
 
 def sum_n_cubes(number):
-    pass
+    res = ((number * (number + 1) / 2) ** 2)
+    return int(res)
 
 
 def encode_better():
-    pass
+    input_msg = input("enter a message: ")
+    input_key = input("enter a key: ")
+    user_code = input_msg
+    user_key = input_key
+    output = " "
+    for i in range(len(user_code)):
+        msg_value = ord(user_code[i]) - 65
+        key_value = ord(user_key[i % len(user_key)]) - 65
+        result_msg = ((msg_value + key_value) % 57) + 65
+        output = output + chr(result_msg)
+    print(output)
 
 
 if __name__ == '__main__':
@@ -48,7 +75,6 @@ if __name__ == '__main__':
     # print(res)
     # res = sum_n(100)
     # print(res)
-    # res = sum_n_cubes(13)
+    # res = sum_n_cubes(4)
     # print(res)
     # encode_better()
-    pass

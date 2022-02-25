@@ -1,0 +1,31 @@
+# 2/23
+import math
+from graphics import *
+
+
+def sum_dif(x, y):
+    sum_val = x + y
+    diff_val = x - y
+    return sum_val, diff_val
+
+
+my_sum, my_diff = sum_dif(10, 7)
+#print(my_diff)
+#print(my_sum)
+sum_dif(10, 7)
+
+
+def get_discount(price, sale):
+    price = price * (1 - sale)
+    return price
+
+
+price = 100
+price = get_discount(price, .20)
+print(price)
+
+def change_point(p, x, y):
+    p.move(x,y)
+my_point = Point(2,3)
+change_point(my_point, 100, 200)
+ print(my_point.getX(),my_point.getY())

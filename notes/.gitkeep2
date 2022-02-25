@@ -1,6 +1,6 @@
 # 2/21 CHAPTER 6 FUNCTIONS
 import math
-from math import *
+
 from graphics import *
 
 
@@ -37,6 +37,6 @@ def distance(p1, p2):  # writing a function to determine distance and return it
 
 
 point_a = Point(2, 3)
-point_b = Point(100, 220)
+point_b = Point(3, 4)
 d = distance(point_a, point_b)
 print(d)
