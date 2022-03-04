@@ -57,24 +57,14 @@ def encode_better():
     input_key = input("enter a key: ")
     user_code = input_msg
     user_key = input_key
-    output = " "
+    output = ""
     for i in range(len(user_code)):
         msg_value = ord(user_code[i]) - 65
         key_value = ord(user_key[i % len(user_key)]) - 65
-        result_msg = ((msg_value + key_value) % 57) + 65
+        result_msg = ((msg_value + key_value) % 58) + 65
         output = output + chr(result_msg)
     print(output)
 
 
 if __name__ == '__main__':
-    # cash_converter()
-    # encode()
-    # res = sphere_area(13)
-    # print(res)
-    # res = sphere_volume(13)
-    # print(res)
-    # res = sum_n(100)
-    # print(res)
-    # res = sum_n_cubes(4)
-    # print(res)
-    # encode_better()
+    encode()
