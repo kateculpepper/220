@@ -18,14 +18,14 @@ from encryption import encode_better
 
 def number_words(in_file_name, out_file_name):
     infile = open(in_file_name, "r")
-    outfile = open(out_file_name, "w")
+    outfile = open(out_file_name, "x")
 
     count = 1
     for line in infile:
         for word in line.split():
-            outfile.write(str(count) + " " + word + "\n")
+            print((str(count) + " " + word + "\n"), file=outfile)
             count = count + 1
-
+    print("\n", file = outfile)
     infile.close()
     outfile.close()
 
@@ -40,7 +40,7 @@ def hourly_wages(in_file_name, out_file_name):
         hoursWorked = int(employee[3])
         bonus = hoursWorked * 1.65
         weeklyWage = (hourlyWage * hoursWorked) + bonus
-        outfile.write(employeeName + " {:.2f}".format(weeklyWage) + "\n")
+        print((employeeName + " {:.2f}".format(weeklyWage) + "\n"), file=outfile)
 
     infile.close()
     outfile.close()
@@ -61,7 +61,7 @@ def send_message(file_name, friend_name):
     friendfile = open(friend_name + ".txt", "w")
 
     for line in file:
-        friendfile.write(line)
+        print(line, file=friendfile)
 
     file.close()
     friendfile.close()
@@ -72,7 +72,7 @@ def send_safe_message(file_name, friend_name, key):
     friendfile = open(friend_name + ".txt", "w")
 
     for line in file:
-        friendfile.write(encode(line, key) + "\n")
+        print((encode(line, key) + "\n"), file=friendfile)
 
     file.close()
     friendfile.close()
@@ -87,10 +87,11 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
     key = key.split(" ")
     key = key[1]
     msg = file.read()
-    friendfile.write(encode_better(msg, key))
+    print(encode_better(msg, key), file=friendfile)
+
 
 if __name__ == '__main__':
-    # number_words("pad.txt", "pad2.txt")
+    # number_words("words.txt", "words2.txt")
     # hourly_wages("wages.txt", "wages2.txt")
     # calc_check_sum("0-072-94652-0")
     # send_message("friend.txt", "justin")
