@@ -1,5 +1,5 @@
 def encode(input_msg, input_key):
-    output = " "
+    output = ""
     for i in range(len(input_msg)):
         msg_value = ord(input_msg[i])
         key_value = input_key
