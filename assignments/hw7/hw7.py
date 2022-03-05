@@ -1,13 +1,16 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: <Kate Culpepper>
+<hw7>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <This program run several functions. the function number_words opens a file and numbers each word,
+hourly_wages takes a file with first and last name they pay and work hours then calculates teh total pay for the week
+including a new bonus calc_check_sum calculates the sum of an isbn code, the last function take an encode function
+and separate inserted files and outputs coded messages>
 
 Certification of Authenticity:
-<include one of the following>
+
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+
 """
 from encryption import encode
 from encryption import encode_better
