@@ -83,8 +83,8 @@ def send_uncrackable_message(file_name, friend_name, pad_file_name):
 
     key = padfile.read()
     msg = file.read()
-
     print(encode_better(msg, key), file=friendfile)
+
 
 if __name__ == '__main__':
     number_words("words.txt", "words2.txt")
