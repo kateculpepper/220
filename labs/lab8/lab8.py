@@ -10,7 +10,6 @@ I certify that this assignment is entirely my own work.
 
 """
 
-
 def weighted_average(in_file_name, out_file_name):
     infile = open(in_file_name, "r")
     outfile = open(out_file_name, "w")
