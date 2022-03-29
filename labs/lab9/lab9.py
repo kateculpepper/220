@@ -1,15 +1,18 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: <Kate Culpepper>
+<Lab9>.py
+
+This program allows the user to play a game of tic tac toe
 """
 
 
-def build_board():
-    pass
+def build_board():  # list of elements 1-9 and re
+    game_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    return game_list
 
 
 def print_board(board):
-    """ prints the values of baord """
+    """ prints the values of board """
     RED = "\033[1;31m"
     BLUE = "\033[1;36m"
     LIGHT_GRAY = "\033[0;37m"
@@ -37,32 +40,117 @@ def print_board(board):
 
 
 def is_legal(board, position):
-    pass
+    if str(board[position - 1]).isnumeric():
+        return True
+    else:
+        return False
 
 
 def fill_spot(board, position, character):
-    pass
+    board[position - 1] = character.strip().lower()
 
 
 def winning_game(board):
-    pass
+    if board[0] == board[1] == board[2]:
+        return True
+    elif board[0] == board[3] == board[6]:
+        return True
+    elif board[1] == board[4] == board[7]:
+        return True
+    elif board[2] == board[5] == board[8]:
+        return True
+    elif board[3] == board[4] == board[5]:
+        return True
+    elif board[6] == board[7] == board[8]:
+        return True
+    elif board[0] == board[4] == board[8]:
+        return True
+    elif board[2] == board[4] == board[6]:
+        return True
+    else:
+        return False
 
 
 def game_over(board):
-    pass
+    no_moves = False
+    for i in board:
+        if i == 'x' or i == 'o':
+            no_moves = True
+        else:
+            no_moves = False
+            break
+    if winning_game(board):
+        return True
+    elif no_moves:
+        return True
+    else:
+        return False
 
 
 def get_winner(board):
-    pass
+    if winning_game(board) == True and game_over(board) :
 
+        if board[0] == board[1] == board[2] == 'x':
+            return 'x'
+        elif board[0] == board[3] == board[6]  == 'x':
+            return 'x'
+        elif board[1] == board[4] == board[7] == 'x':
+            return 'x'
+        elif board[2] == board[5] == board[8] == 'x':
+            return 'x'
+        elif board[3] == board[4] == board[5] == 'x':
+            return 'x'
+        elif board[6] == board[7] == board[8] == 'x':
+            return 'x'
+        elif board[0] == board[4] == board[8] == 'x':
+            return 'x'
+        elif board[2] == board[4] == board[6] == 'x':
+            return 'x'
+        else:
+            return 'o'
+    else:
+        return None
 
 def play(board):
-    pass
+    user_instructions = "Let's Play Tic Tac Toe! X's go first, to choose your position choose a number 1-9"
+    print(user_instructions)
+    print_board(board)
+    while winning_game(board) == False and game_over(board) == False:
+        input_x = eval(input("X's, choose a position:"))
+        if is_legal(board, input_x):
+            fill_spot(board, input_x, 'x')
+            print_board(board)
+            if game_over(board):
+                break
+        else:
+            print("That's illegal!")
+        input_o = eval(input("o's, choose a position:"))
+        if is_legal(board, input_o):
+            fill_spot(board, input_o, 'o')
+            print_board(board)
+            if game_over(board):
+                break
+        else:
+            print("That's illegal!")
+    if get_winner(board) == 'x':
+        print("x's win!")
+    elif get_winner(board) == 'o':
+        print("O's win!")
+    else:
+        print("It's a tie!")
+    replay_input = input("Play again?")
+
+    if replay_input[0] == 'y':
+
+        main()
 
 
 def main():
-    pass
+    play(build_board())
+
 
 
 if __name__ == '__main__':
+
+
     main()
