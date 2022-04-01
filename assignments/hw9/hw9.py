@@ -2,7 +2,7 @@
 Name: <Kate Culpepper>
 <HW9>.py
 
-Problem: <This program runs a series of functions, when put together
+Problem: <This program runs a series of functions, when put together 
  creates a game of hangman >
 
 Certification of Authenticity:

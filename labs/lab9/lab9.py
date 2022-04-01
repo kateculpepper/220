@@ -79,9 +79,9 @@ def game_over(board):
         else:
             no_moves = False
             break
-    if winning_game(board):
+    if winning_game(board) == True:
         return True
-    elif no_moves:
+    elif no_moves == True:
         return True
     else:
         return False

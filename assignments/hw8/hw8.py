@@ -4,7 +4,7 @@ Name: <Kate Culpepper>
 
 Problem: <This program runs a series of functions, that adds 10 to each item in a list
 sures each item within a list, sum a list of numbers, changes a string of numbers
-into floats, sets parameters to athletes, and calculates if a year is a leap year, the final
+into floats, sets parameters to athletes, and calculates if a year is a leap year, the final 
 function displays if two circles overlap >
 
 Certification of Authenticity:
@@ -121,3 +121,4 @@ if __name__ == '__main__':
     did_overlap()
     starter()
     leap_year()
+
