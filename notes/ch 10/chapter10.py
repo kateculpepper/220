@@ -41,6 +41,8 @@ class Die:
 
     #methods
 go to die.py in notes file to see created die class
+incapsualtion -
+interfaces -
 """
 # from graphics import *
 # from die import Die

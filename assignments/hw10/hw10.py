@@ -1,14 +1,18 @@
+from graphics import *
+from face import Face
+
+
 # f = f n-1 + fn-2
 
-# def fibonacci(n):
-# if n < 1:
-# return None
-# elif n == 1 or n == 2:
-# return 1
-# elif n == 0:
-# return 0
-# else:
-# return fibonacci(n - 1) + fibonacci(n - 2)
+def fibonacci(n):
+    if n < 1:
+        return None
+    elif n == 1 or n == 2:
+        return 1
+    elif n == 0:
+        return 0
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 # am i allowed to use recursion,
 
 def double_investment(principle, rate):
@@ -40,14 +44,28 @@ def syracuse(n):
     pass
 
 
-#def goldbach(n):  # output: [prime, prime]
-    #gold_list: []
-    #while n > 2:
-       # if n % 2 == 0:
-            #return True
-        #else:
-            #return None
-    #pass
+def goldbach(n):  # output: [prime, prime]
+
+gold_list: []
+    while n > 2:
+        if n % 2 == 0:
+            return True
+        else:
+            return None
+pass
+
+def main():
+    width_px = 700
+    height_px = 700
+    window = GraphWin("test", width_px, height_px)
+    width = 10
+    height = 10
+    window.setCoords(0, 0, width, height)
+
+    Face(window, Point(5, 5), 4)
+    window.getMouse()
+    window.close()
+
 
 if __name__ == '__main__':
-    pass
+    main()

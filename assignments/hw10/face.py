@@ -23,9 +23,17 @@ class Face:
         self.mouth = Line(point_1, point_2)
         self.mouth.draw(window)
 
-    def smile(self):
+    def smile(self, center, size):
         self.mouth.undraw()
-        smile = Polygon(Point())
+        mouth_size = 0.8 * size
+        mouth_off = size / 2.0
+        point_1 = center.clone()
+        point_1.move(-mouth_size / 2, mouth_off)
+        point_2 = center.clone()
+        point_2.move(mouth_size / 2, mouth_off)
+        point_3 = center.clone
+        point3.move(mouth_size)
+        smile = Polygon()
 
     def shock(self):
         pass
