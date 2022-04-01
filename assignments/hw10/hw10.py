@@ -1,3 +1,17 @@
+
+"""
+Name: <kate Culpepper>
+<hw 10>.py
+
+Problem: <In this program it runs a number of differetn functions, related to dofferent sequences
+ this program also include a sphere class and a face class>
+
+Certification of Authenticity:
+
+I certify that this assignment is entirely my own work.
+
+"""
+
 from graphics import *
 from face import Face
 
