@@ -42,20 +42,31 @@ class Die:
     #methods
 go to die.py in notes file to see created die class
 """
+# from graphics import *
+# from die import Die
+from student import Student
 
 
 def main():
-from Die import Die
-    p = Point(2,3)
-    number_of_sides = eval(input('how many sides?: '))
-    d = Die(number_of_sides)
-    playing = True
-    while playing:
-        d.roll()
-        print(d.get_value())
+    # d = Die(6)
+    # d2 = Die(12)
+    # d.roll()
+    # d2.roll()
+    # print(d.get_value(), d2.get_value())
 
-        stopping = input('hit input to enter:')
-        playing = not stopping
+    student_file = open('student.txt', 'r')
+    student_file.readline()
+    students = []
+    for line in student_file.readlines():
+        split_student = line.split(',')
+        name = split_student[0]
+        hours = split_student[1]
+        points = split_student[2]
+        student = Student(name, hours, points)
+        students.append(student)
+    print(students)
+    for student in students:
+        print(student.get_name())
 
 
 if __name__ == '__main__':

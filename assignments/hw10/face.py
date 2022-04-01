@@ -1,4 +1,4 @@
-from graphics import Circle, Line
+from graphics import Circle, Line, Polygon
 
 
 class Face:
@@ -24,7 +24,8 @@ class Face:
         self.mouth.draw(window)
 
     def smile(self):
-        pass
+        self.mouth.undraw()
+        smile = Polygon(Point())
 
     def shock(self):
         pass
