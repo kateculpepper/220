@@ -44,7 +44,8 @@ class Door:
         point_y = point.getY()
         shape_p1 = self.shape.getP1()
         shape_p2 = self.shape.getP2()
-        if shape_p1.getX() <= point_x <= shape_p2.getX() and shape_p1.getY() >= point_y >= shape_p2.getY():
+
+        if shape_p1.getX() <= point_x <= shape_p2.getX() and shape_p1.getY() <= point_y <= shape_p2.getY():
             return True
         else:
             return False
