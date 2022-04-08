@@ -4,7 +4,6 @@ class SalesPerson:
         self.name = name
         self.sales = []
 
-
     def get_id(self):
         return self.employee_id
 
@@ -12,23 +11,35 @@ class SalesPerson:
         return self.name
 
     def set_name(self, name):
-        name = self.name
+        self.name = name
         return name
 
     def enter_sale(self, sale):
         self.sales.append(sale)
 
     def total_sale(self):
-        pass
+        total_sum = 0
+        for sale in self.sales:
+            total_sum = total_sum + sale
+        return total_sum
 
     def get_sales(self):
-        pass
+        return self.sales
 
-    def met_quota(self,quota):
-        pass
+    def met_quota(self, quota):
+        if self.total_sale() >= quota:
+            return True
+        else:
+            return False
 
     def compare_to(self, other):
-        pass
 
-    def _str_(self):
-        pass
+        if other.total_sale() == self.total_sale():
+            return 0
+        elif other.total_sale() >= self.total_sale():
+            return -1
+        elif self.total_sale() > other.total_sale():
+            return 1
+
+    def __str__(self):
+        return str(self.get_id()) + '-' + self.get_name() + ' : ' + str(self.total_sale())
