@@ -1,6 +1,6 @@
 """
 Name: <Kate Culpepper>
-<lab 11>.py
+<lab 12>.py
 
 Problem: <This assignment runs a program with a series of different functions>
 
