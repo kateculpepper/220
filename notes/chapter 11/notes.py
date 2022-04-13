@@ -30,9 +30,25 @@ in a dictionary there are no index values
 all the index values are called keys
 you can make the key whatever you want
 key : value
+
+a tuple is imutable you can't change the teh list
+
+key:value
+d = {"jane" : 50, "john": 82)
+d["john"]
+'>>>>82'
+
+dictionary methods in text book
 """
 from graphics import *
 
+def family():
+families ={}
+families['smith'] = ['sam', 'steve', 'sloan']
+a = families['smith']
+for key, value in families.items():
+    print(key)
+    print(value)
 
 def print_c(circles):
     for circle in circles:
@@ -44,7 +60,7 @@ def x_sort(circle):
     return circle.getCenter().getX()
 
 
-def main():
+def main():  # (x,y,radius) of a circle
     circle_data = [(20, 30, 90), (2, 3, 909), (25, 35, 9), (208, 33, 990)]
     circle_data.sort(key=sort_data)
     circles= []
@@ -58,3 +74,4 @@ def main():
     circles = [c1, c2, c3, c4]
     circles.sort(key=x_sort)
     print_c(circles)
+    family()
